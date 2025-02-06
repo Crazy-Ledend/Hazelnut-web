@@ -2,8 +2,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;  /* Allow body to stretch and have a footer at the bottom */
 }
 
 /* General Styles */
@@ -11,14 +9,9 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    flex-grow: 1; /* Allow body to stretch and footer to be pushed to the bottom */
-}
-
-/* Main content wrapper */
-.main-content {
-    flex-grow: 1; /* Make sure the content takes up available space */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Ensure the content takes up available space and the footer sticks at the bottom */
+    justify-content: space-between; /* Space between the header, content, and footer */
 }
 
 /* Particles Background Styling */
@@ -53,15 +46,12 @@ header p {
     margin: auto;
 }
 
-/* Other styles remain the same... */
-
-/* Footer */
+/* Ensure the footer sticks at the bottom */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #1e1e2f;
     color: #aaa;
-    margin-top: auto;  /* Ensures footer sticks at the bottom */
 }
 
 footer a {

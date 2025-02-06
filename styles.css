@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background-color: #1f1c2c; /* Fallback background color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Particles Background Styling - Cover the entire page */

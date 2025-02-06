@@ -1,189 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HazelNut - Your Futuristic Assistant</title>
+    <meta name="description" content="HazelNut is your ultimate futuristic assistant for Discord. Manage games, trivia, and more with ease.">
+    <meta name="keywords" content="Discord bot, HazelNut, trivia, games, assistant, Pokedex">
+    <meta name="author" content="HazelTech Team">
     <link rel="icon" href="https://crazy-ledend.github.io/Hazelnut-web/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1f1c2c, #928dab);
-            color: #fff;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* Particles Background Styling */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Behind content */
-        }
-
-        header {
-            background-color: #1e1e2f;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #e0aaff;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .shortcuts {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .shortcuts a {
-            color: #e0aaff;
-            text-decoration: none;
-            font-size: 1.1em;
-            margin: 0 15px;
-        }
-
-        .shortcuts a:hover {
-            text-decoration: underline;
-        }
-
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .feature {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            flex: 1 1 300px;
-            max-width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .feature:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature h2 {
-            color: #e0aaff;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            line-height: 1.5;
-        }
-
-        .cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .cta a {
-            text-decoration: none;
-            background: #6a4c93;
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.2em;
-            transition: background 0.3s;
-        }
-
-        .cta a:hover {
-            background: #4a3570;
-        }
-
-        .comparison-table {
-            margin: 40px 0;
-            width: 100%;
-            border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            border: 1px solid #fff;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .comparison-table th {
-            background-color: #6a4c93;
-            color: #fff;
-        }
-
-        .testimonials {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .testimonials h2 {
-            margin-bottom: 20px;
-            color: #e0aaff;
-        }
-
-        .testimonials blockquote {
-            font-style: italic;
-            margin: 20px auto;
-            padding: 10px 20px;
-            max-width: 800px;
-            border-left: 4px solid #e0aaff;
-            color: #ddd;
-        }
-
-        .faq {
-            margin: 40px 0;
-        }
-
-        .faq h2 {
-            color: #e0aaff;
-            margin-bottom: 20px;
-        }
-
-        .faq p {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e2f;
-            color: #aaa;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #e0aaff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
 </head>
+
 <body>
     <header>
         <h1>HazelNut</h1>
@@ -210,7 +39,7 @@
             </div>
             <div class="feature">
                 <h2>Earn Your First Credit</h2>
-                <p>Complete quests, attend trivias, invest in stocks, and wager to earn!</p>
+                <p>Complete quests, attend trivia, invest in stocks, and wager to earn!</p>
             </div>
             <div class="feature">
                 <h2>Comprehensive Pokedex</h2>
@@ -275,6 +104,7 @@
 
     <!-- JavaScript inclusion -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js"></script> <!-- Your external JavaScript -->
 </body>
+
 </html>

@@ -2,8 +2,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 /* General Styles */
@@ -11,19 +9,23 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    flex: 1 0 auto; /* Ensure body fills all available space */
+    position: relative;
     display: flex;
-    flex-direction: column; /* Stack header, content, and footer vertically */
+    flex-direction: column; /* Allow footer to be pushed down */
+    justify-content: space-between; /* Distribute space between header, content, and footer */
 }
 
-/* Particles Background Styling */
+/* Particles Background Styling - Cover the entire page */
 #particles-js {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1; /* Behind content */
 }
 
+/* Header Styling */
 header {
     background-color: #1e1e2f;
     padding: 20px;
@@ -42,13 +44,15 @@ header p {
     margin-top: 10px;
 }
 
+/* Container for content */
 .container {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-    flex-grow: 1; /* Allow the content area to take up available space */
+    flex-grow: 1;
 }
 
+/* Shortcuts section */
 .shortcuts {
     margin-bottom: 40px;
     text-align: center;
@@ -65,6 +69,7 @@ header p {
     text-decoration: underline;
 }
 
+/* Features section */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +101,7 @@ header p {
     line-height: 1.5;
 }
 
+/* Call to Action button */
 .cta {
     text-align: center;
     margin: 40px 0;
@@ -115,6 +121,7 @@ header p {
     background: #4a3570;
 }
 
+/* Comparison table */
 .comparison-table {
     margin: 40px 0;
     width: 100%;
@@ -134,6 +141,7 @@ header p {
     color: #fff;
 }
 
+/* Testimonials section */
 .testimonials {
     text-align: center;
     margin: 40px 0;
@@ -153,6 +161,7 @@ header p {
     color: #ddd;
 }
 
+/* FAQ section */
 .faq {
     margin: 40px 0;
 }
@@ -166,15 +175,13 @@ header p {
     margin-bottom: 20px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #1e1e2f;
     color: #aaa;
     margin-top: 40px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 footer a {

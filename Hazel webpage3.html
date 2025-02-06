@@ -231,7 +231,7 @@
                 </a>
             </div>
 
-            <!-- Step 3 -->
+            <!-- Step 3 (Example with multiple images) -->
             <div class="tutorial-step">
                 <h3>Step 3: Complete Tasks</h3>
                 <p>Use the <code>;task</code> command and complete the given task to earn more!</p>
@@ -308,20 +308,43 @@
     </footer>
 
     <script>
-        // Open modal
-        function openModal(imgElement) {
+        let currentIndex = 0; // Keeps track of the current image
+
+        // Store the image sources in an array for easy access
+        const imageSources = [
+            'invite.png', 'help_command.png', 'task1.png', 'task2.png', 'trivia1.png', 'trivia2.png', 'trivia3.png', 'stocks1.png', 'stocks2.png', 'stocks3.png', 'shop.png'
+            // Add other images as needed
+        ];
+
+        // Open modal and display the image clicked
+        function openModal(imgElement, index) {
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("modalImage");
+            currentIndex = index; // Set the index of the current image
             modal.style.display = "flex";
-            modalImg.src = imgElement.querySelector('img').src;
+            modalImg.src = imgElement.querySelector('img').src; // Set the image source
         }
 
-        // Close modal
+        // Close the modal
         function closeModal() {
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
         }
 
+        // Change the image based on the navigation button
+        function changeImage(direction) {
+            var modalImg = document.getElementById("modalImage");
+            currentIndex += direction; // Move to the next or previous image
+
+            // Ensure the index is within the bounds of the image array
+            if (currentIndex < 0) {
+                currentIndex = imageSources.length - 1;
+            } else if (currentIndex >= imageSources.length) {
+                currentIndex = 0;
+            }
+
+            modalImg.src = imageSources[currentIndex]; // Update the image in the modal
+        }
         // Particles.js config (remains the same)
         particlesJS("particles-js", {
             "particles": {

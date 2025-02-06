@@ -2,18 +2,21 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
 }
 
-/* General Styles */
+/* Body should be a flex container */
 body {
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    flex: 1 0 auto; /* Ensure body fills all available space */
-    display: flex;
-    flex-direction: column; /* Stack header, content, and footer vertically */
+}
+
+/* Main content area should take all available space */
+.main-content {
+    flex-grow: 1; /* Allow the content area to take up available space */
 }
 
 /* Particles Background Styling */
@@ -46,7 +49,6 @@ header p {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-    flex-grow: 1; /* Allow the content area to take up available space */
 }
 
 .shortcuts {
@@ -172,8 +174,6 @@ footer {
     background-color: #1e1e2f;
     color: #aaa;
     margin-top: 40px;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 

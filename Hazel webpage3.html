@@ -353,6 +353,14 @@
         modalImg.src = imageSources[currentIndex]; // Update the image in the modal
     }
 
+        // Close the modal if clicked outside the image
+document.getElementById("myModal").addEventListener("click", function(event) {
+    // Check if the click target is the modal itself (not the image)
+    if (event.target === this) {
+        closeModal();
+    }
+});
+        
         // Particles.js config (remains the same)
         particlesJS("particles-js", {
             "particles": {

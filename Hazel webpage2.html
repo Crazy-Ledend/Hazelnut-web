@@ -16,7 +16,7 @@
         <p>Your ultimate guide to all HazelNut commands!</p>
     </header>
     
-    <div id="particles-js"></div>
+    <div id="particles-js"></div> <!-- Particles Background -->
     
     <div class="container">
         <div class="shortcuts">
@@ -76,8 +76,40 @@
     <footer>
         <p>Developed with ❤️ by HazelTech Team. Check us out on <a href="https://discord.gg/WxvEhxG5Q5">Discord</a>.</p>
     </footer>
-        <!-- JavaScript inclusion -->
+    
+    <!-- JavaScript inclusion -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Background Configuration (same as index.html)
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: { enable: true, value_area: 800 }
+                },
+                color: { value: '#e0aaff' },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { enable: true, speed: 2 }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100
+                    }
+                }
+            }
+        });
+    </script>
     <script src="main.js"></script> <!-- Your external JavaScript -->
 </body>
 

@@ -46,6 +46,7 @@ header h1 {
 }
 
 h2, h3 {
+    margin: 0;
     color: #e0aaff; /* Same color as h1 */
 }
 

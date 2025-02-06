@@ -1,0 +1,69 @@
+// 1. Animated Typing Effect
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "Your ultimate futuristic assistant for Discord!";
+    let index = 0;
+    const subtitle = document.querySelector("header p");
+
+    function typeEffect() {
+        if (index < text.length) {
+            subtitle.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100); // speed = 100ms per character
+        }
+    }
+
+    subtitle.innerHTML = ""; 
+    typeEffect();
+});
+
+// 2. Dark Mode Toggle
+document.getElementById("darkModeToggle").addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    const icon = document.getElementById("darkModeToggle");
+    icon.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+});
+
+// 3. Smooth Scroll for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+// 4. Testimonial Rotator
+const testimonials = [
+    "HazelNut has completely changed how we manage our Discord server. The trivia and games are so much fun!",
+    "The Pokedex feature is a game-changer for Pokémon fans. Highly recommend it!",
+    "I love how interactive and engaging HazelNut is! Definitely a must-have bot.",
+];
+
+let currentTestimonial = 0;
+function rotateTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    document.getElementById("testimonial").textContent = testimonials[currentTestimonial];
+}
+
+setInterval(rotateTestimonial, 5000);
+
+// 5. FAQ Accordion (Expandable Answers)
+document.querySelectorAll(".faq-question").forEach(q => {
+    q.addEventListener("click", () => {
+        q.nextElementSibling.classList.toggle("faq-answer");
+        q.nextElementSibling.style.display = (q.nextElementSibling.style.display === "block") ? "none" : "block";
+    });
+});
+
+// 6. Particles.js Background
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: { speed: 2 }
+    }
+});

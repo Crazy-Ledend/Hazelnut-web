@@ -45,12 +45,8 @@ header h1 {
     color: #e0aaff;
 }
 
-header h2 {
-    color: #e0aaff;
-}
-
-header h3 {
-    color: #e0aaff;
+h2, h3 {
+    color: #e0aaff; /* Same color as h1 */
 }
 
 header p {

@@ -50,19 +50,32 @@ document.querySelectorAll(".faq-question").forEach(q => {
 });
 
 // 5. Particles.js Background
-particlesJS("particles-js", {
+particlesJS('particles-js', {
     particles: {
-        number: { value: 80 },
-        color: { value: "#e0aaff" },
-        shape: { type: "circle" },
+        number: {
+            value: 100,
+            density: { enable: true, value_area: 800 }
+        },
+        color: { value: '#e0aaff' },
+        shape: {
+            type: 'circle'
+        },
         opacity: { value: 0.5 },
         size: { value: 3 },
         move: { enable: true, speed: 2 }
     },
     interactivity: {
-        events: { onhover: { enable: true, mode: "repulse" } },
+        events: {
+            onhover: {
+                enable: true,
+                mode: 'repulse'
+            }
+        },
         modes: {
-            repulse: { distance: 100 }
+            repulse: {
+                distance: 100
+            }
         }
     }
 });
+

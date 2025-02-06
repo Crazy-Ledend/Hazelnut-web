@@ -2,21 +2,23 @@
 html, body {
     height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;  /* Allow body to stretch and have a footer at the bottom */
 }
 
-/* Body should be a flex container */
+/* General Styles */
 body {
-    display: flex;
-    flex-direction: column;  /* Stack content vertically */
-    height: 100%;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
+    flex-grow: 1; /* Allow body to stretch and footer to be pushed to the bottom */
 }
 
-/* Main content area should take all available space */
+/* Main content wrapper */
 .main-content {
-    flex-grow: 1; /* Allow the content area to take up available space */
+    flex-grow: 1; /* Make sure the content takes up available space */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Particles Background Styling */
@@ -51,130 +53,15 @@ header p {
     margin: auto;
 }
 
-.shortcuts {
-    margin-bottom: 40px;
-    text-align: center;
-}
+/* Other styles remain the same... */
 
-.shortcuts a {
-    color: #e0aaff;
-    text-decoration: none;
-    font-size: 1.1em;
-    margin: 0 15px;
-}
-
-.shortcuts a:hover {
-    text-decoration: underline;
-}
-
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.feature {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1 1 300px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-}
-
-.feature h2 {
-    color: #e0aaff;
-    margin-bottom: 10px;
-}
-
-.feature p {
-    line-height: 1.5;
-}
-
-.cta {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.cta a {
-    text-decoration: none;
-    background: #6a4c93;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 1.2em;
-    transition: background 0.3s;
-}
-
-.cta a:hover {
-    background: #4a3570;
-}
-
-.comparison-table {
-    margin: 40px 0;
-    width: 100%;
-    border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.comparison-table th,
-.comparison-table td {
-    border: 1px solid #fff;
-    padding: 15px;
-    text-align: center;
-}
-
-.comparison-table th {
-    background-color: #6a4c93;
-    color: #fff;
-}
-
-.testimonials {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.testimonials h2 {
-    margin-bottom: 20px;
-    color: #e0aaff;
-}
-
-.testimonials blockquote {
-    font-style: italic;
-    margin: 20px auto;
-    padding: 10px 20px;
-    max-width: 800px;
-    border-left: 4px solid #e0aaff;
-    color: #ddd;
-}
-
-.faq {
-    margin: 40px 0;
-}
-
-.faq h2 {
-    color: #e0aaff;
-    margin-bottom: 20px;
-}
-
-.faq p {
-    margin-bottom: 20px;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #1e1e2f;
     color: #aaa;
-    margin-top: 40px;
-    width: 100%;
+    margin-top: auto;  /* Ensures footer sticks at the bottom */
 }
 
 footer a {

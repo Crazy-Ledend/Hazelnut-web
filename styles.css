@@ -2,6 +2,8 @@
 html, body {
     height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /* General Styles */
@@ -9,10 +11,9 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    position: relative;
+    flex: 1 0 auto; /* Ensure body fills all available space */
     display: flex;
-    flex-direction: column; /* Allow footer to be pushed down */
-    justify-content: space-between; /* Distribute space between header, content, and footer */
+    flex-direction: column; /* Stack header, content, and footer vertically */
 }
 
 /* Particles Background Styling */
@@ -171,6 +172,9 @@ footer {
     background-color: #1e1e2f;
     color: #aaa;
     margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {

@@ -1,11 +1,19 @@
+/* Ensure the body and HTML take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 /* General Styles */
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    position: relative;
-    overflow-x: hidden;
+    flex: 1 0 auto; /* Ensure body fills all available space */
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer vertically */
 }
 
 /* Particles Background Styling */
@@ -38,6 +46,7 @@ header p {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    flex-grow: 1; /* Allow the content area to take up available space */
 }
 
 .shortcuts {
@@ -163,6 +172,9 @@ footer {
     background-color: #1e1e2f;
     color: #aaa;
     margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {

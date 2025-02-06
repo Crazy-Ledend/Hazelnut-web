@@ -2,18 +2,17 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden; /* Prevent any scrollbars */
 }
 
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
     position: relative;
     display: flex;
-    flex-direction: column; /* Allow footer to be pushed down */
-    justify-content: space-between; /* Distribute space between header, content, and footer */
-    overflow: hidden; /* Prevent overflow for smoother scrolling */
+    flex-direction: column;
+    justify-content: flex-start; /* Keep content at the top */
 }
 
 /* Particles Background Styling - Cover the entire page */
@@ -21,10 +20,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure particles stay in the background */
-    pointer-events: none; /* Ensure particles do not block interaction with content */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensure particles stay behind all content */
+    pointer-events: none; /* Allow interaction with other elements */
 }
 
 /* Header Styling */

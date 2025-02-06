@@ -16,14 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });
 
-// 2. Dark Mode Toggle
-document.getElementById("darkModeToggle").addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    const icon = document.getElementById("darkModeToggle");
-    icon.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
-});
-
-// 3. Smooth Scroll for Navigation Links
+// 2. Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -33,7 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 4. Testimonial Rotator
+// 3. Testimonial Rotator
 const testimonials = [
     "HazelNut has completely changed how we manage our Discord server. The trivia and games are so much fun!",
     "The Pokedex feature is a game-changer for Pokémon fans. Highly recommend it!",
@@ -48,7 +41,7 @@ function rotateTestimonial() {
 
 setInterval(rotateTestimonial, 5000);
 
-// 5. FAQ Accordion (Expandable Answers)
+// 4. FAQ Accordion (Expandable Answers)
 document.querySelectorAll(".faq-question").forEach(q => {
     q.addEventListener("click", () => {
         q.nextElementSibling.classList.toggle("faq-answer");
@@ -56,14 +49,20 @@ document.querySelectorAll(".faq-question").forEach(q => {
     });
 });
 
-// 6. Particles.js Background
+// 5. Particles.js Background
 particlesJS("particles-js", {
     particles: {
         number: { value: 80 },
-        color: { value: "#ffffff" },
+        color: { value: "#e0aaff" },
         shape: { type: "circle" },
         opacity: { value: 0.5 },
         size: { value: 3 },
-        move: { speed: 2 }
+        move: { enable: true, speed: 2 }
+    },
+    interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } },
+        modes: {
+            repulse: { distance: 100 }
+        }
     }
 });

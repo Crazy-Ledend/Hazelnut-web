@@ -45,6 +45,14 @@ header h1 {
     color: #e0aaff;
 }
 
+header h2 {
+    color: #e0aaff;
+}
+
+header h3 {
+    color: #e0aaff;
+}
+
 header p {
     font-size: 1.2em;
     margin-top: 10px;

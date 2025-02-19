@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazelNut - Badges</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #1a1a2e;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .badge-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        .badge-card:hover {
+            transform: scale(1.1);
+        }
+        .badge-card img {
+            width: 80px;
+            height: 80px;
+        }
+        .badge-tooltip {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .badge-card:hover .badge-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>HazelNut - Obtainable Badges</h1>
+    <div class="badge-container">
+        <div class="badge-card">
+            <img src="badges/triviamaster.png" alt="Badge 1">
+            <p>Trivia Master</p>
+            <div class="badge-tooltip">Earned by scoring 100+ trivia points</div>
+        </div>
+        <div class="badge-card">
+            <img src="badges/speedster.png" alt="Badge 2">
+            <p>Speedster</p>
+            <div class="badge-tooltip">Earned by answering 10 trivia questions correctly within 10 seconds each</div>
+        </div>
+        <div class="badge-card">
+            <img src="badges/streakking.png" alt="Badge 3">
+            <p>Streak King</p>
+            <div class="badge-tooltip">Earned by achieving a streak of 25 consecutive correct answers in trivia</div>
+        </div>
+        <div class="badge-card">
+            <img src="badges/taskmaster.png" alt="Badge 4">
+            <p>Task Master</p>
+            <div class="badge-tooltip">Earned by working 10 times in a row successfully!</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -93,9 +93,75 @@
 
         <section class="faq">
             <h2>Frequently Asked Questions</h2>
-            <p><strong>Q: Is Hazelnut free to use?</strong><br>Yes! Hazelnut is completely free to use.</p>
-            <p><strong>Q: How do I get started?</strong><br>Click the "Invite Hazelnut Now" button above to add Hazelnut to your server.</p>
+            
+            <div class="faq-category">
+                <h3>Getting Started</h3>
+                <div class="faq-item">
+                    <button class="faq-question">Is HazelNut free to use? ▼</button>
+                    <p class="faq-answer">Yes! HazelNut is completely free to use.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do I invite HazelNut to my server? ▼</button>
+                    <p class="faq-answer">Click the "Invite HazelNut Now" button above to add it to your server.</p>
+                </div>
+            </div>
+            
+            <div class="faq-category">
+                <h3>Features</h3>
+                <div class="faq-item">
+                    <button class="faq-question">Does HazelNut support multiple languages? ▼</button>
+                    <p class="faq-answer">Currently, HazelNut supports English, but more languages will be added soon.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What games does HazelNut offer? ▼</button>
+                    <p class="faq-answer">HazelNut includes trivia, tic-tac-toe, word scramble, and more interactive games!</p>
+                </div>
+            </div>
+            
+            <div class="faq-category">
+                <h3>Troubleshooting</h3>
+                <div class="faq-item">
+                    <button class="faq-question">HazelNut is not responding, what should I do? ▼</button>
+                    <p class="faq-answer">Ensure HazelNut has the correct permissions and check its status on the support Discord.</p>
+                </div>
+            </div>
         </section>
+        
+        <style>
+            .faq-item { margin-bottom: 10px; }
+            .faq-question {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                background-color: #4a148c;
+                color: white;
+                border: none;
+                cursor: pointer;
+                text-align: left;
+                border-radius: 5px;
+            }
+            .faq-answer {
+                display: none;
+                padding: 10px;
+                background-color: #f3e5f5;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        </style>
+        
+        <script>
+            document.querySelectorAll(".faq-question").forEach(button => {
+                button.addEventListener("click", () => {
+                    const answer = button.nextElementSibling;
+                    const isVisible = answer.style.display === "block";
+                    
+                    document.querySelectorAll(".faq-answer").forEach(p => p.style.display = "none");
+                    
+                    answer.style.display = isVisible ? "none" : "block";
+                });
+            });
+        </script>
+
     </div>
 
     <footer>

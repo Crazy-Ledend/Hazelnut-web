@@ -13,13 +13,23 @@
             color: #e0e0e0;
             font-family: 'Roboto', sans-serif;
             text-align: center;
-            padding: 20px;
+            padding-top: 100px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         .content {
             flex: 1;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #12122d;
+            padding: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
         .shortcuts {
             margin-bottom: 20px;
@@ -82,14 +92,14 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <header>
-            <h1>HazelNut - Obtainable Badges</h1>
-            <p>Your ultimate guide to all HazelNut commands!</p>
-        </header>
-        
-        <div id="particles-js"></div> <!-- Particles Background -->
+    <header>
+        <h1>HazelNut - Obtainable Badges</h1>
+        <p>Your ultimate guide to all HazelNut commands!</p>
+    </header>
     
+    <div id="particles-js"></div> <!-- Particles Background -->
+    
+    <div class="content">
         <div class="shortcuts">
             <a href="index.html">Home</a>
             <a href="commands.html">Commands</a>

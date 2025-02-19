@@ -91,5 +91,44 @@
             <div class="badge-tooltip">Earned by working 10 times in a row successfully!</div>
         </div>
     </div>
+        <footer>
+        <p>Developed with ❤️ by HazelTech Team. Check us out on <a href="https://discord.gg/WxvEhxG5Q5">Discord</a>.</p>
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="copyright.html">Copyright ©</a>
+    </footer>
+    
+    <!-- JavaScript inclusion -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Background Configuration (same as index.html)
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: { enable: true, value_area: 800 }
+                },
+                color: { value: '#e0aaff' },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { enable: true, speed: 2 }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="main.js"></script> <!-- Your external JavaScript -->
 </body>
 </html>

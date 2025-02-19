@@ -113,6 +113,7 @@
             .faq-item {
                 margin-bottom: 10px;
                 border-bottom: 1px solid #444;
+                overflow: hidden;
             }
             .faq-question {
                 background: none;
@@ -129,13 +130,16 @@
                 background: #222;
             }
             .faq-answer {
-                display: none;
-                padding: 10px;
+                max-height: 0;
+                overflow: hidden;
+                padding: 0 10px;
                 font-size: 16px;
                 color: #ccc;
+                transition: max-height 0.5s ease-out, padding 0.3s ease-out;
             }
             .faq-item.active .faq-answer {
-                display: block;
+                max-height: 200px;
+                padding: 10px;
             }
         </style>
         
